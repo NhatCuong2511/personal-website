@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+  margin: 0;
+  background: #0b1220;
+}
+
+#canvas {
+    position: fixed; /* Fixes it to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Places it behind the content */
+    display: block;
+}
+
+.header {
+  background-color: #0b1220;
+  width: 100%;
+  margin: 0;
+}
+
+#hi {
+  animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+  25% { color: #FF2DD1; }
+  50% { color: #FDFFB8; }
+  75% { color: #4DFFBE; }
+  100% { color: #63C8FF; }
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 10; /* Higher than the canvas -1 */
+    pointer-events: none; /* Allows mouse to "touch" the canvas if needed */
+}
+
+/* Crucial: ensure interactive elements still work */
+.btn, a, h1, p {
+    pointer-events: auto;
+}
+
+.bg {
+  background: #0d1117;
+  opacity: 98%;
+}
+
+h1, p {
+  font-family: "Lato", sans-serif;;
+}
